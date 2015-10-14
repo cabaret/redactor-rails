@@ -564,7 +564,7 @@
 
 					if (typeof this.formatting[name].data != 'undefined') type = 'data';
 					else if (typeof this.formatting[name].attr != 'undefined') type = 'attr';
-					else if (typeof this.formatting[name].class != 'undefined') type = 'class';
+					else if (typeof this.formatting[name].className != 'undefined') type = 'class';
 
 					if (type) value = this.formatting[name][type];
 
@@ -2722,7 +2722,7 @@
 						$.each(this.opts.formattingAdd, $.proxy(function(i,s)
 						{
 							var name = s.tag;
-							if (typeof s.class != 'undefined')
+							if (typeof s.className != 'undefined')
 							{
 								name = name + '-' + s.class;
 							}
@@ -2735,7 +2735,7 @@
 							this.formatting[name] = {
 								tag: s.tag,
 								style: s.style,
-								'class': s.class,
+								'className': s.class,
 								attr: s.attr,
 								data: s.data
 							};
@@ -3625,7 +3625,7 @@
 					var type, value;
 
 					if (typeof this.formatting[name].style != 'undefined') type = 'style';
-					else if (typeof this.formatting[name].class != 'undefined') type = 'class';
+					else if (typeof this.formatting[name].className != 'undefined') type = 'class';
 
 					if (type) value = this.formatting[name][type];
 
